@@ -11,8 +11,6 @@ const Blog = (props) => {
 
   const { blogs, loader } = useSelector((state) => state.userReducer);
 
-  console.log(blogs);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
