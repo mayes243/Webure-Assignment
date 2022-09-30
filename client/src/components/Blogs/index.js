@@ -34,7 +34,7 @@ const Blog = () => {
                     <img
                       class="transform hover:scale-105 transition ease-in-out duration-1000"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv85bGgBVHECXS9UL8hhyjzIInP23uFTRzFyo4zeTNYA&s"
-                      alt=""
+                      alt={blog.title}
                     />
                   </div>
                 </div>
