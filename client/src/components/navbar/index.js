@@ -25,17 +25,18 @@ const Navbar = () => {
   return (
     <div className="bg-gray-50">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4 text-lg">
+        <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4 text-lg">
           {[
             { title: "Dashboard", path: "/dashboard" },
             { title: "Add Blogs", path: "/blog/add" },
             { title: "Features", path: "#" },
             { title: "Marketplace", path: "#" },
             { title: "Company", path: "#" },
-          ].map((nav) => (
+          ].map((nav, index) => (
             <Link
               to={nav.path}
               className="font-medium text-gray-500 hover:text-gray-900"
+              key={index}
             >
               {nav.title}
             </Link>
@@ -54,7 +55,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <span className="sr-only">Open user menu</span>
-                <sapn className="h-8 w-8 p-1">👤</sapn>
+                <span className="h-8 w-8 p-1">👤</span>
                 <span className="text-center p-1 font-semibold">
                   {user?.result.email}
                 </span>

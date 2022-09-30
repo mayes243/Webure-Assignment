@@ -38,7 +38,7 @@ export const addBlog = async (req, res) => {
 // get all blogs
 export const blogs = async (req, res) => {
   try {
-    const result = await BlogModal.find();
+    const result = await BlogModal.find({});
 
     res.status(200).json(result);
   } catch (error) {

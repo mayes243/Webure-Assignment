@@ -32,8 +32,8 @@ const Blog = () => {
                 <div className="w-auto p-4">
                   <div className="overflow-hidden rounded-xl">
                     <img
-                      className="transform hover:scale-105 transition ease-in-out duration-1000"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv85bGgBVHECXS9UL8hhyjzIInP23uFTRzFyo4zeTNYA&s"
+                      className="transform hover:scale-105 transition ease-in-out duration-1000 h-40 w-full object-contain"
+                      src={`${axios.defaults.baseURL}/blog/${blog.picture}`}
                       alt={blog.title}
                     />
                   </div>

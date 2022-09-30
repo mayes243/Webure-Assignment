@@ -20,7 +20,8 @@ const app = express();
 connectDB();
 
 //API security
-app.use(helmet());
+// app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 app.use(
   session({
@@ -42,6 +43,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(cors());
+
+// static file path
+app.use(express.static("public"));
 
 //Logger
 app.use(morgan("tiny"));
