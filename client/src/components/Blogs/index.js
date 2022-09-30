@@ -60,10 +60,10 @@ const Blog = () => {
                             - {blog?.createdBy}
                           </p>
                         </div>
-                        <p className="text-sm font-semibold leading-relaxed">
-                          - {moment(blog?.createdAt).format("MMM Do YY")}
-                        </p>
                       </div>
+                      <p className="text-sm font-bold leading-relaxed">
+                        {moment(blog?.createdAt).format("MMM Do YY")}
+                      </p>
                     </div>
                   </div>
                 </div>
