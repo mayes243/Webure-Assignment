@@ -6,7 +6,7 @@ import moment from "moment";
 
 import { getAllBlogs } from "../../Feature/Action/userAction";
 
-const Blog = (props) => {
+const Blog = () => {
   const auth = localStorage.getItem("token");
 
   const { blogs, loader } = useSelector((state) => state.userReducer);
